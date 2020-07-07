@@ -20,15 +20,10 @@
         <br>
 
         <div class="inputinfo">
-            <form class="form-input">
+            <form class="form-input" action="/VoterServlet">
                 <label for="inputEmail" class="sr-only">Enter Your Information Here:</label>
-                <input type="address" id="inputAddress" name="address" class="form-control" placeholder="Enter Address" required autofocus>
-                <input type="electionID" id="inputID" class="form-control" placeholder="Election ID" required>
-                <div class="checkbox mb-3">
-                    <label>
-                        <input type="checkbox" value="remember-me"> Remember me
-                    </label>
-                </div>
+                <input type="address" id="address" name="address" class="form-control" placeholder="Enter Address" required autofocus>
+                <input type="electionID" id="inputID" name="inputID" class="form-control" placeholder="Election ID" required>
                 <input type="submit" class="btn btn-lg btn-primary btn-block">
             </form>
         </div>
