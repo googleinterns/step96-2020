@@ -32,3 +32,4 @@ jobs:
           done
           exit $EXIT
         shell: bash
+        shell: bash
