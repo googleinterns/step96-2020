@@ -23,9 +23,6 @@ import com.google.api.services.calendar.model.Events;
 import com.google.api.services.calendar.model.EventAttendee;
 
 import java.io.IOException;
-import java.lang.UnsupportedOperationException;
-import java.util.ArrayList;
-import java.util.List;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
