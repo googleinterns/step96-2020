@@ -14,6 +14,6 @@ public class VoterServlet extends HttpServlet {
     String inputID = request.getParameter("inputID");
     String address = request.getParameter("address");
     // Redirect back to the HTML page.
-    response.sendRedirect("/event-listing.html");
+    response.sendRedirect("/eventlisting.html");
   }
 }
