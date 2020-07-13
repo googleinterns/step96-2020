@@ -88,7 +88,7 @@ public class EventListing extends HttpServlet {
                 .build();
 	}
 
-    public void createEvents(Calendar service) throws IOException{
+    public void createEvent(Calendar service) throws IOException{
         Event event = new Event()
             .setSummary("Google I/O 2015")
             .setLocation("800 Howard St., San Francisco, CA 94103")
