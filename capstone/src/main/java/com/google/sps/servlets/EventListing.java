@@ -45,7 +45,7 @@ public class EventListing extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException{
         try {
 		EventListing calendarHandler = new EventListing();
-        calendarHandler.createEvents(calendarHandler.setUp(response));
+        	calendarHandler.createEvent(calendarHandler.setUp(response));
         } catch (GeneralSecurityException e) {}
 	}
 	
