@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-@WebServlet("/VoterServlet")
+@WebServlet("/VoterServlet1")
 public class VoterServlet extends HttpServlet {
 
     @Override
@@ -32,6 +32,7 @@ public class VoterServlet extends HttpServlet {
             String responseBody = scanner.useDelimiter("\\A").next();
             System.out.println(responseBody);
         }
+        
 
         // Redirect back to the HTML page.
         response.sendRedirect("/event-listing.html");
