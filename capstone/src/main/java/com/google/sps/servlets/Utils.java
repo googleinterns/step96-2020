@@ -49,14 +49,14 @@ class Utils {
           !clientSecrets.getDetails().getClientId().startsWith("Enter ")
               && !clientSecrets.getDetails().getClientSecret().startsWith("Enter "),
           "Download client_secrets.json file from https://code.google.com/apis/console/"
-              + "?api=calendar into calendar-appengine-sample/src/main/resources/client_secrets.json");
+              + "?api=calendar into src/main/resources/credentials.json");
     }
     return clientSecrets;
   }
 
   static String getRedirectUri(HttpServletRequest req) {
     GenericUrl url = new GenericUrl(req.getRequestURL().toString());
-    url.setRawPath("/oauth2callback");
+    url.setPort(8080);
     return url.build();
   }
 
