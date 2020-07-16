@@ -11,7 +11,7 @@ public class EventListing extends HttpServlet {
 
   @Override
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    Auth auth = new Auth();
-    auth.initializeFlow();
+    response.sendRedirect("/auth");
+    com.google.api.services.calendar.Calendar client = Utils.loadCalendarClient();
   }
 }
