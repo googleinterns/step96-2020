@@ -56,7 +56,7 @@ class Utils {
 
   static String getRedirectUri(HttpServletRequest req) {
     GenericUrl url = new GenericUrl(req.getRequestURL().toString());
-    url.setPort(8080);
+    url.setRawPath("/oauth2callback");
     return url.build();
   }
 
