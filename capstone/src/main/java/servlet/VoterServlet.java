@@ -38,4 +38,5 @@ public class VoterServlet extends HttpServlet {
         response.sendRedirect("/event-listing.html");
     }
 
+
 }
