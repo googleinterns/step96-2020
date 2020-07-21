@@ -1,5 +1,3 @@
-/* exported login */
-
 /**
  * Initiates login flow by redirecting to /auth.
  */
