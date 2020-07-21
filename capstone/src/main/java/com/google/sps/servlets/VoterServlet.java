@@ -17,12 +17,7 @@ public class VoterServlet extends HttpServlet {
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
     String electionId = request.getParameter("electionId");
     String address = request.getParameter("address");
-    Dotenv dotenv =
-        Dotenv.configure()
-            .directory(System.getProperty("user.dir"))
-            .ignoreIfMalformed()
-            .ignoreIfMissing()
-            .load();
+    Dotenv dotenv = Dotenv.configure().directory(System.getProperty("user.dir")).load();
     String key_prod = dotenv.get("API_KEY");
     String Key_Test = "";
     System.out.println("Api key is " + key_prod);
@@ -48,6 +43,6 @@ public class VoterServlet extends HttpServlet {
     }
 
     // Redirect back to the HTML page.
-    response.sendRedirect("/event-listing.html");
+    response.sendRedirect("/eventlisting.html");
   }
 }
