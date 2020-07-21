@@ -3,17 +3,7 @@ public class Event{
     String location;
     String summary;
 
-    public String getid() {
-        return id;
-    }
-    public String getlocation() {
-        return location;
-    }
-    public String getsummary() {
-        return summary;
-    }
-
-    public void Event(String summary, String id) {
+    public void EventSummary(String summary, String id) {
         this.summary = summary;
         this.id = id;
 
@@ -24,6 +14,15 @@ public class Event{
         this.id = id;
         this.location = location;
 
+    }
+    public String getid() {
+        return id;
+    }
+    public String getlocation() {
+        return location;
+    }
+    public String getsummary() {
+        return summary;
     }
    
 }
