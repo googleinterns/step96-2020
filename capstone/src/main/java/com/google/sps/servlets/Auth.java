@@ -15,7 +15,7 @@ public class Auth extends AbstractAppEngineAuthorizationCodeServlet {
   @Override
   protected void doGet(HttpServletRequest request, HttpServletResponse response)
       throws IOException {
-    response.sendRedirect("/eventlisting.html");
+    response.sendRedirect("/eventlisting");
   }
 
   @Override
