@@ -42,6 +42,6 @@ public class VoterServlet extends HttpServlet {
     }
 
     // Redirect back to the HTML page.
-    response.sendRedirect("/eventlisting.html");
+    response.sendRedirect("/event-listing.html");
   }
 }
