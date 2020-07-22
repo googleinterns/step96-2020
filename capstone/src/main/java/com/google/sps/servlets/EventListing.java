@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 public class EventListing extends HttpServlet {
 
   @Override
-  public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+  public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
     Calendar service = Utils.loadCalendarClient();
     Event event =
         new Event()
