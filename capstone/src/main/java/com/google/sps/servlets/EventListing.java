@@ -20,7 +20,7 @@ public class EventListing extends HttpServlet {
     createEvent();
   }
 
-  public void createEvent() {
+  public void createEvent() throws IOException {
     Calendar service = Utils.loadCalendarClient();
     Event event =
         new Event()
