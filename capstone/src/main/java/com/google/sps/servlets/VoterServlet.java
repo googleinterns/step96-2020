@@ -19,7 +19,7 @@ public class VoterServlet extends HttpServlet {
     String address = request.getParameter("address");
     Dotenv dotenv = Dotenv.configure().directory(System.getProperty("user.dir")).load();
     String key_prod = dotenv.get("API_KEY");
-    String Key_Test = "AIzaSyDsC3_W5OQ4qZ8Z7bctpLGkvUONY3hRpG4";
+    String Key_Test = "";
     String url = "https://www.googleapis.com/civicinfo/v2/voterinfo";
     String charset = "UTF-8";
 
