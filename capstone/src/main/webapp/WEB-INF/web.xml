@@ -25,6 +25,16 @@
     <url-pattern>/auth/*</url-pattern>
   </servlet-mapping>
 
+  <servlet>
+    <servlet-name>eventListing</servlet-name>
+    <servlet-class>com.google.sps.servlets.EventListing</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>eventListing</servlet-name>
+    <url-pattern>/eventlisting/*</url-pattern>
+  </servlet-mapping>
+
   <security-constraint>
     <web-resource-collection>
       <web-resource-name>any</web-resource-name>
