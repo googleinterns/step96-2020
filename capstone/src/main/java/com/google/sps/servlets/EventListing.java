@@ -17,6 +17,10 @@ public class EventListing extends HttpServlet {
 
   @Override
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    createEvent();
+  }
+
+  public void createEvent() throws IOException {
     Calendar service = Utils.loadCalendarClient();
     Event event =
         new Event()
