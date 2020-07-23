@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/VoterServlet1")
+@WebServlet("/VoterServlet")
 public class VoterServlet extends HttpServlet {
 
   @Override
@@ -19,7 +19,7 @@ public class VoterServlet extends HttpServlet {
     String address = request.getParameter("address");
     Dotenv dotenv = Dotenv.configure().directory(System.getProperty("user.dir")).load();
     String key_prod = dotenv.get("API_KEY");
-    String Key_Test = "";
+    String Key_Test = "AIzaSyDsC3_W5OQ4qZ8Z7bctpLGkvUONY3hRpG4";
     String url = "https://www.googleapis.com/civicinfo/v2/voterinfo";
     String charset = "UTF-8";
 
@@ -42,6 +42,6 @@ public class VoterServlet extends HttpServlet {
     }
 
     // Redirect back to the HTML page.
-    response.sendRedirect("/event-listing.html");
+    response.sendRedirect("/eventlisting");
   }
 }
