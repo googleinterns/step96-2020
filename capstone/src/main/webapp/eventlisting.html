@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>Event Listing</title>
+    <link href="eventDesign.css" type="text/css" rel="stylesheet">
     <script src="script.js"></script>
   </head>
   <body>
@@ -13,7 +14,10 @@
       <p>Information About the Event</p>
       <div class="bottom"></div> <! end bottom -->
       <div class="middle">
-        <button onclick="login()">Add to Calendar</button>
+        <button type="button" onclick="login();">Login</button>
+        <form action="/eventlisting" method="POST" name="list">
+          <button>Add to Calendar</button>
+        </form>
       </div>
     </div> <!-- end holder div -->
   </body>
