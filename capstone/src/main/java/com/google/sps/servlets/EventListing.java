@@ -14,16 +14,20 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/eventlisting")
 public class EventListing extends HttpServlet {
-  
+
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {}
 
   @Override
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    String name = request.getAttribute("name").toString();
+    String electionDay = request.getAttribute("electionDay").toString();
+
     createEvent();
   }
 
   public void createEvent() throws IOException {
+
     Calendar service = Utils.loadCalendarClient();
     Event event =
         new Event()
