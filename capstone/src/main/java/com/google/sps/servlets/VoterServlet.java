@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.json.*;
 
+
 @WebServlet("/VoterServlet")
 public class VoterServlet extends HttpServlet {
 
@@ -21,6 +22,7 @@ public class VoterServlet extends HttpServlet {
     Dotenv dotenv = Dotenv.configure().directory(System.getProperty("user.dir")).load();
     String key_prod = dotenv.get("API_KEY");
     String Key_Test = " ";
+
     String url = "https://www.googleapis.com/civicinfo/v2/voterinfo";
     String charset = "UTF-8";
 
@@ -45,6 +47,7 @@ public class VoterServlet extends HttpServlet {
     String electionDay = election_obj.get("electionDay").toString();
     request.setAttribute("name", name);
     request.setAttribute("electionDay", electionDay);
+
 
     // Redirect back to the HTML page.
     response.sendRedirect("/eventlisting");

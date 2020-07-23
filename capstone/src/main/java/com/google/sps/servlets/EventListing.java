@@ -20,9 +20,10 @@ public class EventListing extends HttpServlet {
 
   @Override
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+
     String name = request.getAttribute("name").toString();
     String electionDay = request.getAttribute("electionDay").toString();
-
+    
     createEvent();
   }
 
