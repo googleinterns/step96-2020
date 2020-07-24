@@ -9,6 +9,16 @@
     <servlet-name>oauth2Callback</servlet-name>
     <servlet-class>com.google.sps.servlets.OAuth2Callback</servlet-class>
   </servlet>
+  
+   <servlet>
+    <servlet-name>VoterServlet</servlet-name>
+    <servlet-class>com.google.sps.servlets.VoterServlet</servlet-class>
+  </servlet>
+
+   <servlet-mapping>
+    <servlet-name>VoterServlet</servlet-name>
+    <url-pattern>/VoterServlet/*</url-pattern>
+  </servlet-mapping>
 
   <servlet-mapping>
     <servlet-name>oauth2Callback</servlet-name>
@@ -23,6 +33,16 @@
   <servlet-mapping>
     <servlet-name>auth</servlet-name>
     <url-pattern>/auth/*</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>eventListing</servlet-name>
+    <servlet-class>com.google.sps.servlets.EventListing</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>eventListing</servlet-name>
+    <url-pattern>/eventlisting/*</url-pattern>
   </servlet-mapping>
 
   <security-constraint>

@@ -27,4 +27,3 @@ public class Event{
     public String getsummary() {
         return summary;
     } 
-}
