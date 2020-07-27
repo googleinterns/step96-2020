@@ -1,5 +1,6 @@
 package com.google.sps.servlets;
 
+import com.google.sps.data.VotingEvent;
 import io.github.cdimascio.dotenv.Dotenv;
 import java.io.IOException;
 import java.io.InputStream;
@@ -36,21 +37,21 @@ public class VoterServlet extends HttpServlet {
     URLConnection connection = new URL(url + "?" + query).openConnection();
     connection.setRequestProperty("Accept-Charset", charset);
     JSONObject electionJsonObject = getJSONObject(connection);
-    String electionName = getElectionDay(electionJsonObject);
-    String electionDay = getElectionName(electionJsonObject);
-    request.setAttribute("name", electionName);
-    request.setAttribute("electionDay", electionDay);
+    String electionName = getElectionName(electionJsonObject);
+    String electionDay = getElectionDay(electionJsonObject);
+    VotingEvent event = new VotingEvent(electionName, electionDay);
+    request.setAttribute("event", event);
     response.sendRedirect("/eventlisting");
   }
 
   private String getElectionDay(JSONObject electionJsonObject) {
-    String name = electionJsonObject.get("name").toString();
-    return name;
+    String electionDay = electionJsonObject.get("electionDay").toString();
+    return electionDay;
   }
 
   private String getElectionName(JSONObject electionJsonObject) {
-    String electionDay = electionJsonObject.get("electionDay").toString();
-    return electionDay;
+    String name = electionJsonObject.get("name").toString();
+    return name;
   }
 
   private JSONObject getJSONObject(URLConnection connection) throws IOException {
