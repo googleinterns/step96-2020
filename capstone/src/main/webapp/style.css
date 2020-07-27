@@ -1,12 +1,13 @@
-html,
 body {
   height: 100%;
-  background-color: #333;
-  color: #fefefe;
+  background-image: url(https://media.giphy.com/media/L0J7ICm4GNzyvs0ZUx/giphy.gif);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  color: black;
   letter-spacing: 0.2em;
-  font-size: 1.3em;
+  font-size: 2em;
   line-height: 2;
-  font-weight: 300;
+  font-weight: 700;
   text-rendering: optimizeLegibility;
   text-align: center;
   font-family: 'Times New Roman', Times, serif;
@@ -22,12 +23,11 @@ body {
   align-items: center;
   padding-top: 40px;
   padding-bottom: 40px;
- 
 }
 
 .form-input {
   width: 100%;
-  max-width: 330px;
+  max-width: 350px;
   padding: 15px;
   margin: 0 auto;
 }
@@ -39,29 +39,28 @@ body {
   padding: 10px;
   font-size: 16px;
 }
+
 .form-input .form-control:focus {
   z-index: 2;
 }
-.form-input input[type="address"] {
-  margin-bottom: -1px;
+
+.form-input input[type="address"],
+.form-input input[type="electionID"] {
+  margin-bottom: 10px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
-.form-input input[type="electionID"] {
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
 
 input[type=submit]:hover{
-  color: #fff;
+  color: black;
   text-shadow: none; /* Prevent inheritance from `body` */
   background-color: #bbb;
   border: .05rem solid #bbb;
 }
+
 input[type=submit] {
-    background-color: #f2f2f2;
-    color: black;
+    background-color: black;
+    color: #f2f2f2;
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
