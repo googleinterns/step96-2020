@@ -5,12 +5,12 @@ public class VotingEvent {
   String location;
   String name;
 
-  public void VotingEventSummary(String name, String date) {
+  public VotingEvent(String name, String date) {
     this.name = name;
     this.date = date;
   }
 
-  public void VotingEvent(String name, String date, String location) {
+  public VotingEvent(String name, String date, String location) {
     this.name = name;
     this.date = date;
     this.location = location;
