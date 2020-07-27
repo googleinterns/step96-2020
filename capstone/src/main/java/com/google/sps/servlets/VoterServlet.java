@@ -36,7 +36,7 @@ public class VoterServlet extends HttpServlet {
             URLEncoder.encode(electionId, charset));
     URLConnection connection = new URL(url + "?" + query).openConnection();
     connection.setRequestProperty("Accept-Charset", charset);
-    JSONObject electionJsonObject = getVotingEvent(connection);
+    JSONObject electionJsonObject = getJSONObject(connection);
     String electionName = electionJsonObject.get("name").toString();
     String electionDay = electionJsonObject.get("electionDay").toString();
     VotingEvent event = new VotingEvent(electionName, electionDay);
@@ -44,7 +44,7 @@ public class VoterServlet extends HttpServlet {
     response.sendRedirect("/eventlisting");
   }
 
-  private JSONObject getVotingEvent(URLConnection connection) throws IOException {
+  private JSONObject getJSONObject(URLConnection connection) throws IOException {
     InputStream result = connection.getInputStream();
     Scanner scanner = new Scanner(result);
     JSONObject obj = new JSONObject(scanner.useDelimiter("\\A").next());
