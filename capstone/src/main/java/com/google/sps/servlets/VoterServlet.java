@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import org.json.*;
 
 @WebServlet("/VoterServlet")
 public class VoterServlet extends HttpServlet {
@@ -19,7 +20,7 @@ public class VoterServlet extends HttpServlet {
     String address = request.getParameter("address");
     Dotenv dotenv = Dotenv.configure().directory(System.getProperty("user.dir")).load();
     String key_prod = dotenv.get("API_KEY");
-    String Key_Test = "AIzaSyDsC3_W5OQ4qZ8Z7bctpLGkvUONY3hRpG4";
+    String Key_Test = "";
     String url = "https://www.googleapis.com/civicinfo/v2/voterinfo";
     String charset = "UTF-8";
 
@@ -34,14 +35,28 @@ public class VoterServlet extends HttpServlet {
             URLEncoder.encode(electionId, charset));
     URLConnection connection = new URL(url + "?" + query).openConnection();
     connection.setRequestProperty("Accept-Charset", charset);
-    InputStream result = connection.getInputStream();
-
-    try (Scanner scanner = new Scanner(result)) {
-      String responseBody = scanner.useDelimiter("\\A").next();
-      System.out.println(responseBody);
-    }
-
-    // Redirect back to the HTML page.
+    JSONObject electionJsonObject = getJSONObject(connection);
+    String electionName = getElectionDay(electionJsonObject);
+    String electionDay = getElectionName(electionJsonObject);
+    request.setAttribute("name", electionName);
+    request.setAttribute("electionDay", electionDay);
     response.sendRedirect("/eventlisting");
+  }
+
+  private String getElectionDay(JSONObject electionJsonObject) {
+    String name = electionJsonObject.get("name").toString();
+    return name;
+  }
+
+  private String getElectionName(JSONObject electionJsonObject) {
+    String electionDay = electionJsonObject.get("electionDay").toString();
+    return electionDay;
+  }
+
+  private JSONObject getJSONObject(URLConnection connection) throws IOException {
+    InputStream result = connection.getInputStream();
+    Scanner scanner = new Scanner(result);
+    JSONObject obj = new JSONObject(scanner.useDelimiter("\\A").next());
+    return obj;
   }
 }
