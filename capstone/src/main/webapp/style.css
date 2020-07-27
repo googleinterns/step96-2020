@@ -51,17 +51,17 @@ body {
   border-bottom-left-radius: 0;
 }
 
-input[type=submit]:hover{
+input[type=submit] {
+  background-color: black;
+  color: #f2f2f2;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+}
+
+input[type=submit]:hover {
   color: black;
   text-shadow: none; /* Prevent inheritance from `body` */
   background-color: #bbb;
   border: .05rem solid #bbb;
-}
-
-input[type=submit] {
-    background-color: black;
-    color: #f2f2f2;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
 }
