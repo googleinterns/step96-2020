@@ -63,5 +63,5 @@ input[type=submit]:hover {
   color: black;
   text-shadow: none; /* Prevent inheritance from `body` */
   background-color: #bbb;
-  border: .05rem solid #bbb;
+  border: 0.05rem solid #bbb;
 }
