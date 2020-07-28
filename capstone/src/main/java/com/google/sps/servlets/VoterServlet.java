@@ -6,6 +6,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.*;
 import java.util.*;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -16,7 +19,8 @@ import org.json.*;
 public class VoterServlet extends HttpServlet {
 
   @Override
-  public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+  public void doGet(HttpServletRequest request, HttpServletResponse response)
+      throws IOException, ServletException {
     String electionId = request.getParameter("electionId");
     String address = request.getParameter("address");
     Dotenv dotenv = Dotenv.configure().directory(System.getProperty("user.dir")).load();
@@ -41,7 +45,10 @@ public class VoterServlet extends HttpServlet {
     String electionDay = electionJsonObject.get("electionDay").toString();
     VotingEvent event = new VotingEvent(electionName, electionDay);
     request.setAttribute("event", event);
-    response.sendRedirect("/eventlisting");
+
+    ServletContext servletContext = getServletContext();
+    RequestDispatcher requestDispatcher = servletContext.getRequestDispatcher("/eventlisting");
+    requestDispatcher.forward(request, response);
   }
 
   private JSONObject getJSONObject(URLConnection connection) throws IOException {

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<%@ page contentType="text/html; charset=UTF-8" %>
 <html>
   <head>
     <meta charset="UTF-8">
@@ -23,10 +23,10 @@
     </div>
       <div class="holder">
         <div class="top">
-          <h3></h3>
+          <h3>${name}</h3>
         </div> <! end top -->
         <div class="text">
-          <h4></h4>
+          <h4>${date}</h4>
         </div> 
         <div class="bottom"></div> <! end bottom -->
         <form action="/eventlisting" method="POST" name="list">
