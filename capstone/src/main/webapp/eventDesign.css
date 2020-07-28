@@ -82,7 +82,7 @@ body {
 .top h3 {
   margin: 0;
   line-height: 30px;
-  padding: 0px 10px;
+  padding: 0 10px;
   font-family: Tahoma, Geneva, sans-serif;
   color: #524747;
   font-size: 20px;
@@ -92,9 +92,9 @@ body {
 .text h4 {
   margin: 0;
   line-height: 30px;
-  padding: 0px 10px;
+  padding: 0 10px;
   font-family: Tahoma, Geneva, sans-serif;
-  color: #000000;
+  color: #000;
   font-size: 15px;
   text-align: center;
   border-left: 1px solid #000;
@@ -133,4 +133,3 @@ body {
   line-height: 30px;
   font-size: 20px;
 }
- 
