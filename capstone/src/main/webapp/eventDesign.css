@@ -1,4 +1,5 @@
-html, 
+html,
+
 body {
   background-image: url(images/banner.jpg);
   margin: 0;
@@ -21,6 +22,11 @@ body {
   font-size: 20px;
 }
 
+.logo > a {
+  text-decoration: none;
+  color: #000;
+}
+
 .nav > li > a {
   text-decoration: none;
   font-size: 18px;
@@ -38,11 +44,6 @@ body {
   padding-left: 25px;
   font-size: 25px;
   font-weight: bold;
-}
-
-.logo > a {
-  text-decoration: none;
-  color: #000;
 }
 
 .welcome {
@@ -72,7 +73,7 @@ body {
 .top {
   width: 248px;
   height: 30px;
-  border: 1px solid #000000;
+  border: 1px solid #000;
   background: rgba(0, 255, 255, 0.582);
   margin-right: auto;
   margin-left: auto;
