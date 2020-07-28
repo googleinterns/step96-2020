@@ -1,40 +1,37 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8">
     <title>Event Listing</title>
-    <link href="eventDesign.css" type="text/css" rel="stylesheet" />
+    <link href="eventDesign.css" type="text/css" rel="stylesheet">
     <script src="script.js"></script>
- </head>
-<body class="text-center">
-   <ul class="nav">
-       <div class="logo">
-           <a href="/index.html">VOTING CALENDAR</a>
-        </div>
-        <li><a href="/index.html">Home</a></li>
-        <li><a href="/auth">Login</a></li>
-     </ul>
+  </head>
+  <body class="text-center">
+    <ul class="nav">
+      <div class="logo">
+        <a href="/index.html">VOTING CALENDAR</a>
+      </div>
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/auth">Login</a></li>
+    </ul>
     <div class="welcome">
-       <h1 class="cover-heading">Available Events</h1>
-        <hr style="height: 2px; border-width: 0; color: gray; background-color: gray;" />
-        <p class="lead">
-           Please Add The Following Event(s) To Your Calendar
-         </p>
-     </div>
-    <div class="holder">
-       <div class="top">
-           <h3></h3>
-        </div>
-        <! end top -->
-        <div class="text">
-            <h4></h4>
-        </div>
-        <div class="bottom"></div>
-        <! end bottom -->
-        <form action="/eventlisting" method="POST" name="list">
-            <button class="button">ADD TO CALENDAR</button>
-        </form>
+      <h1 class="cover-heading">Available Events</h1>
+      <hr style="height: 2px; border-width: 0; color: gray; background-color: gray;">
+      <p class="lead">
+        Please Add The Following Event(s) To Your Calendar
+      </p>
     </div>
-    <!-- end holder div -->
-</body>
+      <div class="holder">
+        <div class="top">
+          <h3></h3>
+        </div> <! end top -->
+        <div class="text">
+          <h4></h4>
+        </div>
+        <div class="bottom"></div> <! end bottom -->
+        <form action="/eventlisting" method="POST" name="list">
+          <button class="button">ADD TO CALENDAR</button>
+        </form>
+      </div> <!-- end holder div -->
+  </body>
 </html>
