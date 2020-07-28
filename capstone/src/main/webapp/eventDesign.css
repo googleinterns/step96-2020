@@ -1,119 +1,135 @@
 html, 
 body {
-     background-image: url(images/banner.jpg);
-     margin: 0;
-     padding: 0;
-     color: #fefefe;
-     font-family: Tahoma, Geneva, sans-serif;
+  background-image: url(images/banner.jpg);
+  margin: 0;
+  padding: 0;
+  color: #fefefe;
+  font-family: Tahoma, Geneva, sans-serif;
 }
- .nav {
-     background-color: #fff;
-     color: #000;
-     list-style: none;
-     text-align: right;
-     padding: 15px 0 15px 0;
+
+.nav {
+  background-color: #fff;
+  color: #000;
+  list-style: none;
+  text-align: right;
+  padding: 15px 0 15px 0;
 }
- .nav > li {
-     display: inline-block;
-     padding: 0 25px 0 25px;
-     font-size: 20px;
+
+.nav > li {
+  display: inline-block;
+  padding: 0 25px 0 25px;
+  font-size: 20px;
 }
- .nav > li > a {
-     text-decoration: none;
-     font-size: 18px;
-     font-weight: bold;
-     color: #000;
+
+.nav > li > a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
 }
- .nav > li > a:hover {
-     color: #c1c1c1;
+
+.nav > li > a:hover {
+  color: #c1c1c1;
 }
- .logo {
-     color: #000;
-     float: left;
-     padding-left: 25px;
-     font-size: 25px;
-     font-weight: bold;
+
+.logo {
+  color: #000;
+  float: left;
+  padding-left: 25px;
+  font-size: 25px;
+  font-weight: bold;
 }
- .logo > a {
-     text-decoration: none;
-     color: #000;
+
+.logo > a {
+  text-decoration: none;
+  color: #000;
 }
- .welcome {
-     font-family:Tahoma, Geneva, sans-serif;
-     color: #fefefe;
-     font-size:25px;
-     text-align:center;
+
+.welcome {
+  font-family: Tahoma, Geneva, sans-serif;
+  color: #fefefe;
+  font-size: 25px;
+  text-align: center;
 }
- .welcome p {
-     font-family:Tahoma, Geneva, sans-serif;
-     color: #fefefe;
-     font-size:22px;
-     text-align:center;
+
+.welcome p {
+  font-family: Tahoma, Geneva, sans-serif;
+  color: #fefefe;
+  font-size: 22px;
+  text-align: center;
 }
- .holder {
-     height: auto;
-     width: 250px;
-     margin-bottom: 25px;
-     margin-top: 200px;
-     margin-right: auto;
-     margin-left: auto;
-     background: #fefefe;
+
+.holder {
+  height: auto;
+  width: 250px;
+  margin-bottom: 25px;
+  margin-top: 200px;
+  margin-right: auto;
+  margin-left: auto;
+  background: #fefefe;
 }
- .top {
-     width: 248px;
-     height: 30px;
-     border: 1px solid #000000;
-     background: rgba(0, 255, 255, 0.582);
-     margin-right: auto;
-     margin-left: auto;
+
+.top {
+  width: 248px;
+  height: 30px;
+  border: 1px solid #000000;
+  background: rgba(0, 255, 255, 0.582);
+  margin-right: auto;
+  margin-left: auto;
 }
- .top h3 {
-     margin: 0;
-     line-height: 30px;
-     padding: 0px 10px;
-     font-family: Tahoma, Geneva, sans-serif;
-     color: #524747;
-     font-size: 20px;
-     text-align: center;
+
+.top h3 {
+  margin: 0;
+  line-height: 30px;
+  padding: 0px 10px;
+  font-family: Tahoma, Geneva, sans-serif;
+  color: #524747;
+  font-size: 20px;
+  text-align: center;
 }
- .text h4{
-     margin: 0;
-     line-height: 30px;
-     padding: 0px 10px;
-     font-family: Tahoma, Geneva, sans-serif;
-     color: #000000;
-     font-size: 15px;
-     text-align: center;
-     border-left: 1px solid #000;
-     border-right: 1px solid #000;
+
+.text h4 {
+  margin: 0;
+  line-height: 30px;
+  padding: 0px 10px;
+  font-family: Tahoma, Geneva, sans-serif;
+  color: #000000;
+  font-size: 15px;
+  text-align: center;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
 }
- .bottom {
-     width: 248px;
-     height: 10px;
-     border-bottom: 1px solid #000;
-     border-left: 1px solid #000;
-     border-right: 1px solid #000;
+
+.bottom {
+  width: 248px;
+  height: 10px;
+  border-bottom: 1px solid #000;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
 }
- .button {
-     display: block;
-     width: 250px;
-     height: 25px;
-     background: rgba(5, 155, 155, 0.582);
-     margin: 0 auto;
-     color: white;
-     overflow: hidden;
-     position: relative;
-     transition-duration: 0.4s;
-     font-size: 15px;
-     font-weight: bold;
-     font-family: Tahoma, Geneva, sans-serif;
+
+.button {
+  display: block;
+  width: 250px;
+  height: 25px;
+  background: rgba(5, 155, 155, 0.582);
+  margin: 0 auto;
+  color: white;
+  overflow: hidden;
+  position: relative;
+  transition-duration: 0.4s;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: Tahoma, Geneva, sans-serif;
 }
- .button:hover {
-     background-color: rgba(0, 0, 0, 0.582);
-     color: white;
+
+.button:hover {
+  background-color: rgba(0, 0, 0, 0.582);
+  color: white;
 }
- .button i{
-     line-height: 30px;
-     font-size: 20px;
+
+.button i {
+  line-height: 30px;
+  font-size: 20px;
 }
  
