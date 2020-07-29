@@ -30,9 +30,7 @@ public class EventListing extends HttpServlet {
 
   @Override
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    if (!votingEvent == null) {
-      insertEvent(createEvent(votingEvent));
-    }
+    insertEvent(createEvent(votingEvent));
     response.sendRedirect("/eventlisting.html");
   }
 
