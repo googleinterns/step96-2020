@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<%@ page contentType="text/html; charset=UTF-8" %>
 <html>
   <head>
     <meta charset="UTF-8">
@@ -16,22 +16,22 @@
     </ul>
     <div class="welcome">
       <h1 class="cover-heading">Available Events</h1>
-      <hr>
+      <hr style="height:2px;border-width:0;color:gray;background-color:gray">
       <p class="lead">
         Please Add The Following Event(s) To Your Calendar
       </p>
     </div>
-    <div class="holder">
-      <div class="top">
-        <h3></h3>
-      </div> <! end top -->
-      <div class="text">
-        <h4></h4>
-      </div>
-      <div class="bottom"></div> <! end bottom -->
-      <form action="/eventlisting" method="POST" name="list">
-        <button class="button">ADD TO CALENDAR</button>
-      </form>
-    </div> <!-- end holder div -->
+      <div class="holder">
+        <div class="top">
+          <h3>${name}</h3>
+        </div> <! end top -->
+        <div class="text">
+          <h4>${date}</h4>
+        </div> 
+        <div class="bottom"></div> <! end bottom -->
+        <form action="/eventlisting" method="POST" name="list">
+          <button class="button">ADD TO CALENDAR</button>
+        </form>
+      </div> <!-- end holder div -->
   </body>
 </html>
