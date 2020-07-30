@@ -23,7 +23,7 @@ public class VoterServlet extends HttpServlet {
       throws IOException, ServletException {
     String electionId = request.getParameter("electionId");
     String address = request.getParameter("address");
-    Dotenv dotenv = Dotenv.configure().directory(System.getProperty("user.dir")).load();
+    Dotenv dotenv = Dotenv.configure().directory("./").load();
     String key_prod = dotenv.get("API_KEY");
     String Key_Test = "";
     String url = "https://www.googleapis.com/civicinfo/v2/voterinfo";
