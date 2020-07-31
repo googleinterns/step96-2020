@@ -34,7 +34,7 @@ public class EventListing extends HttpServlet {
     response.sendRedirect("/eventlisting.html");
   }
 
-  public Event createEvent(VotingEvent votingEvent) throws IOException {
+  public static Event createEvent(VotingEvent votingEvent) throws IOException {
     Event event = new Event().setSummary(votingEvent.getName());
     event.setStart(new EventDateTime().setDate(new DateTime(votingEvent.getDate())));
     event.setEnd(new EventDateTime().setDate(new DateTime(votingEvent.getDate())));
