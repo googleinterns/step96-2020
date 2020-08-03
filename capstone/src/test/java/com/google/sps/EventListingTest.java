@@ -20,4 +20,14 @@ public final class EventListingTest {
         event.getSummary().contains("Test Event")
             && event.getStart().toString().contains("2020-08-07"));
   }
+
+  @Test
+  public void createNullEvent() throws IOException {
+    VotingEvent testEvent = new VotingEvent(null, null);
+    Assert.assertThrows(
+        NullPointerException.class,
+        () -> {
+          EventListing.createEvent(testEvent);
+        });
+  }
 }
