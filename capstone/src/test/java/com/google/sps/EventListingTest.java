@@ -30,4 +30,14 @@ public final class EventListingTest {
           EventListing.createEvent(testEvent);
         });
   }
+
+  @Test
+  public void testCreateEmptyEvent() throws IOException {
+    VotingEvent testEvent = new VotingEvent("", "");
+    Assert.assertThrows(
+        NumberFormatException.class,
+        () -> {
+          EventListing.createEvent(testEvent);
+        });
+  }
 }
