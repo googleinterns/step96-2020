@@ -21,7 +21,7 @@ public class VoterServlet extends HttpServlet {
   public void doGet(HttpServletRequest request, HttpServletResponse response)
       throws IOException, ServletException {
     // API Key for Civic API access
-    String Key_Test = "";
+    String API_Key = "";
     String electionId = request.getParameter("electionId");
     String address = request.getParameter("address");
     String url = "https://www.googleapis.com/civicinfo/v2/voterinfo";
@@ -29,7 +29,7 @@ public class VoterServlet extends HttpServlet {
     String query =
         String.format(
             "key=%s&address=%s&electionId=%s",
-            URLEncoder.encode(Key_Test, charset),
+            URLEncoder.encode(API_Key, charset),
             URLEncoder.encode(address, charset),
             URLEncoder.encode(electionId, charset));
     URLConnection connection = new URL(url + "?" + query).openConnection();
