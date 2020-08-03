@@ -26,7 +26,7 @@
           <h3>${name}</h3>
         </div> <! end top -->
         <div class="text">
-          <h4>${date}</h4>
+          <h4>The date of the event is: ${date}</h4>
         </div> 
         <div class="bottom"></div> <! end bottom -->
         <form action="/eventlisting" method="POST" name="list">
