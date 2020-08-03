@@ -13,7 +13,7 @@ import org.junit.runners.JUnit4;
 public final class EventListingTest {
 
   @Test
-  public void createOneEvent() throws IOException {
+  public void testCreateOneEvent() throws IOException {
     VotingEvent testEvent = new VotingEvent("Test Event", "2020-08-07");
     Event event = EventListing.createEvent(testEvent);
     Assert.assertTrue(
@@ -22,7 +22,7 @@ public final class EventListingTest {
   }
 
   @Test
-  public void createNullEvent() throws IOException {
+  public void testCreateNullEvent() throws IOException {
     VotingEvent testEvent = new VotingEvent(null, null);
     Assert.assertThrows(
         NullPointerException.class,
