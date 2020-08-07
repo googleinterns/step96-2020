@@ -45,7 +45,7 @@ public class VoterServlet extends HttpServlet {
     requestDispatcher.forward(request, response);
   }
 
-  private JSONObject getJSONObject(URLConnection connection) throws IOException {
+  public JSONObject getJSONObject(URLConnection connection) throws IOException {
     InputStream result = connection.getInputStream();
     Scanner scanner = new Scanner(result);
     JSONObject obj = new JSONObject(scanner.useDelimiter("\\A").next());
